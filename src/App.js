@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Episodes from "./components/episodes/Episodes";
 
 function App() {
+  const [episodes, setEpisodes] = useState([]);
+
+  useEffect(() => {
+    fetch("http://api.tvmaze.com/shows")
+      .then((res) => res.json())
+      .then((data) => setEpisodes(data));
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Episodes episodes={episodes} />
     </div>
   );
 }
