@@ -8,6 +8,10 @@ const Episode = ({ episode }) => {
       <h3>{episode.name}</h3>
       <img src={episode.image ? episode.image.medium : null} alt="" />
       <p>{`premired: ${episode.premiered}`}</p>
+      <p>{episode.network ? episode.network.name : ""}</p>
+      <a href={episode.officialSite} target="_blank">
+        Official site
+      </a>
       <div>
         {episode.genres.map((genre, index) => {
           return <span key={index}>{genre}</span>;
