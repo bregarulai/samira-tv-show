@@ -1,0 +1,17 @@
+.search-box {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 40rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    margin: 0 .5rem;
+}
+
+#searchBtn {
+    width: 15rem;
+}
