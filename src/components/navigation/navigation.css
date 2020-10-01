@@ -1,0 +1,22 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #9e9e9e;
+    padding: 0 5rem;
+}
+
+.navigation .brand {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: black;
+    padding-left: .7rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}

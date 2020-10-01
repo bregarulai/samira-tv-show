@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Episodes from "./components/episodes/Episodes";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   const [episodes, setEpisodes] = useState([]);
@@ -12,6 +13,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Navigation />
       <Episodes episodes={episodes} />
     </div>
   );
