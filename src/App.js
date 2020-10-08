@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState
+} from "react";
 import "./App.css";
 import Episodes from "./components/episodes/Episodes";
+import Footer from "./components/footer/Footer";
 import Navigation from "./components/navigation/Navigation";
 import SearchBox from "./components/searchBox/SearchBox";
 
@@ -28,15 +32,25 @@ function App() {
     });
   };
 
-  return (
-    <div className="App">
-      <Navigation />
-      <SearchBox
-        onSearch={onSearch(episodes)}
-        onSearchChange={onSearchChange}
-      />
-      <Episodes episodes={filterShows} />
-    </div>
+  return ( <
+    div className = "App" >
+    <
+    Navigation / >
+    <
+    SearchBox onSearch = {
+      onSearch(episodes)
+    }
+    onSearchChange = {
+      onSearchChange
+    }
+    /> <
+    Episodes episodes = {
+      filterShows
+    }
+    /> <
+    Footer / >
+    <
+    /div>
   );
 }
 
