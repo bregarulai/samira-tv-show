@@ -3,10 +3,10 @@ import Episodes from "../components/episodes/Episodes";
 import Layout from "../components/layout/Layout";
 import SearchBox from "../components/searchBox/SearchBox";
 
-const Shows = ({ onSearch, onSearchChange, episodes }) => {
+const Shows = ({ onSearchChange, episodes }) => {
   return (
     <Layout>
-      <SearchBox onSearch={onSearch} onSearchChange={onSearchChange} />
+      <SearchBox onSearchChange={onSearchChange} />
       <Episodes episodes={episodes} />
     </Layout>
   );

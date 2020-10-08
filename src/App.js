@@ -7,14 +7,15 @@ import Home from "./pages/Home";
 function App() {
   const [episodes, setEpisodes] = useState([]);
   const [searchField, setSearchField] = useState("");
-  let filterShows = [];
+  let filterShows = episodes;
   useEffect(() => {
     fetch("http://api.tvmaze.com/shows")
       .then((res) => res.json())
       .then((data) => {
-        setEpisodes(data);
+        onSearch(data);
+        setEpisodes(filterShows);
       });
-  }, []);
+  }, [filterShows]);
 
   const onSearchChange = (event) => {
     setSearchField(event.target.value);
@@ -40,7 +41,6 @@ function App() {
               {...props}
               episodes={filterShows}
               onSearchChange={onSearchChange}
-              onSearch={onSearch(episodes)}
             />
           )}
         />
