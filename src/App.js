@@ -1,17 +1,13 @@
-import React, {
-  useEffect,
-  useState
-} from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import Episodes from "./components/episodes/Episodes";
-import Footer from "./components/footer/Footer";
-import Navigation from "./components/navigation/Navigation";
-import SearchBox from "./components/searchBox/SearchBox";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Shows from "./pages/Shows";
+import Home from "./pages/Home";
 
 function App() {
   const [episodes, setEpisodes] = useState([]);
   const [searchField, setSearchField] = useState("");
-  let filterShows = "";
+  let filterShows = [];
   useEffect(() => {
     fetch("http://api.tvmaze.com/shows")
       .then((res) => res.json())
@@ -32,25 +28,24 @@ function App() {
     });
   };
 
-  return ( <
-    div className = "App" >
-    <
-    Navigation / >
-    <
-    SearchBox onSearch = {
-      onSearch(episodes)
-    }
-    onSearchChange = {
-      onSearchChange
-    }
-    /> <
-    Episodes episodes = {
-      filterShows
-    }
-    /> <
-    Footer / >
-    <
-    /div>
+  return (
+    <Router className="App">
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route
+          path="/shows"
+          exact
+          render={(props) => (
+            <Shows
+              {...props}
+              episodes={filterShows}
+              onSearchChange={onSearchChange}
+              onSearch={onSearch(episodes)}
+            />
+          )}
+        />
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,19 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navigation.css";
 
 const Navigation = () => {
   return (
     <nav className="navigation">
       <div className="brand">
-        <span>samira tv shows</span>
+        <span> samira tv shows </span>
       </div>
       <div>
-        <a className="navigation-link" href="#">
+        <Link className="navigation-link" to="/">
           home
-        </a>
-        <a className="navigation-link" href="#">
+        </Link>
+        <Link className="navigation-link" to="/shows">
           shows
-        </a>
+        </Link>
       </div>
     </nav>
   );
