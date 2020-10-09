@@ -17,7 +17,7 @@
 }
 
 .card p {
-  padding: .5rem 0 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 0;
   text-transform: capitalize;
 }
 
@@ -31,16 +31,16 @@
   color: #f9a825;
 }
 
-.card a {
+.card #button-link {
   text-decoration: none;
   background-color: #0091ea;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   color: white;
   font-weight: 700;
   text-transform: capitalize;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-.card a:hover {
+.card #button-link:hover {
   background-color: #0277bd;
 }

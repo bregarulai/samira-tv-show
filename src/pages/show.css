@@ -1,0 +1,35 @@
+.hero {
+    display: flex;
+    padding: 2rem 5rem;
+}
+
+.text {
+    padding-left: 1rem;
+}
+
+.text h3 {
+    color: #616161;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.text h5 {
+    color: #616161;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.text p {
+    padding-bottom: 1rem;
+}
+
+#goback-link {
+    text-decoration: none;
+    background-color: #0091ea;
+    padding: 0.7rem 2rem;
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+}
