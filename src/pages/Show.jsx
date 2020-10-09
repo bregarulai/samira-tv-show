@@ -32,6 +32,7 @@ const Show = ({ show }) => {
             {show.schedule ? show.schedule.days[0] : null}s at{" "}
             {show.schedule ? show.schedule.time : null}
           </p>
+          <p>{`Runtime ${show.runtime} minutes.`}</p>
         </div>
       </div>
       <Link id="goback-link" to="/shows">
