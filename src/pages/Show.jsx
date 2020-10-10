@@ -17,15 +17,16 @@ const Show = () => {
       .then((data) => {
         setShow(data);
       });
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
-    console.log(show.id);
     fetch(`http://api.tvmaze.com/shows/${id}/episodes`)
       .then((res) => res.json())
       .then((data) => {
         setShows(data);
       });
+    // eslint-disable-next-line
   }, []);
   return (
     <Layout>

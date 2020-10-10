@@ -3,16 +3,21 @@ import "./episode.css";
 import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
 
-const Episode = ({ episode, handleClickItem }) => {
+const Episode = ({ episode }) => {
   return (
-    <div className="card" onClick={() => handleClickItem(episode)}>
+    <div className="card">
       <Link to={`/shows/${episode.id}`}>
         <h3> {episode.name} </h3>
         <img src={episode.image ? episode.image.medium : null} alt="" />
         <p> {`premired: ${episode.premiered}`} </p>{" "}
         <p> {episode.network ? episode.network.name : ""} </p>{" "}
       </Link>{" "}
-      <a id="button-link" href={episode.officialSite} target="_blank">
+      <a
+        id="button-link"
+        href={episode.officialSite}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Official site{" "}
       </a>{" "}
       <div>
