@@ -9,7 +9,9 @@ function App() {
   const [episodes, setEpisodes] = useState([]);
   const [searchField, setSearchField] = useState("");
   const [show, setShow] = useState({});
+  const [showId, setShowId] = useState("");
   let filterShows = episodes;
+
   useEffect(() => {
     fetch("http://api.tvmaze.com/shows")
       .then((res) => res.json())
@@ -24,8 +26,8 @@ function App() {
   };
 
   const handleClickItem = (show) => {
-    console.log(show);
     setShow(show);
+    setShowId(show.id);
   };
 
   const onSearch = (shows) => {
@@ -52,11 +54,7 @@ function App() {
             />
           )}
         />
-        <Route
-          path="/show"
-          exact
-          render={(props) => <Show {...props} show={show} />}
-        />
+        <Route exact path="/shows/:id" component={Show} />
       </Switch>
     </Router>
   );

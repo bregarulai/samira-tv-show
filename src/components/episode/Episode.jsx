@@ -6,22 +6,21 @@ import { Link } from "react-router-dom";
 const Episode = ({ episode, handleClickItem }) => {
   return (
     <div className="card" onClick={() => handleClickItem(episode)}>
-      <Link to="/show">
-        <h3>{episode.name}</h3>
-
+      <Link to={`/shows/${episode.id}`}>
+        <h3> {episode.name} </h3>
         <img src={episode.image ? episode.image.medium : null} alt="" />
-
-        <p>{`premired: ${episode.premiered}`}</p>
-        <p>{episode.network ? episode.network.name : ""}</p>
-      </Link>
+        <p> {`premired: ${episode.premiered}`} </p>{" "}
+        <p> {episode.network ? episode.network.name : ""} </p>{" "}
+      </Link>{" "}
       <a id="button-link" href={episode.officialSite} target="_blank">
-        Official site
-      </a>
+        Official site{" "}
+      </a>{" "}
       <div>
+        {" "}
         {episode.genres.map((genre, index) => {
-          return <span key={index}>{genre}</span>;
-        })}
-      </div>
+          return <span key={index}> {genre} </span>;
+        })}{" "}
+      </div>{" "}
       <StarRatings
         starRatedColor="#00b0ff"
         numberOfStars={5}
