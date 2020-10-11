@@ -48,9 +48,11 @@ const Show = () => {
           <p> {`Runtime ${show.runtime} minutes.`} </p>
         </div>
       </div>
-      <Link id="goback-link" to="/shows">
-        Go back
-      </Link>
+      <div>
+        <Link id="goback-link" to="/shows">
+          Go back
+        </Link>
+      </div>
       <div>
         <ShowsComponent shows={shows} />
       </div>{" "}

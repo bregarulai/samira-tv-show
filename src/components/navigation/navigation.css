@@ -13,10 +13,36 @@
     text-transform: uppercase;
 }
 
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-icon {
+    font-size: 2rem;
+    display: none;
+    padding-top: .8rem;
+}
+
 .navigation-link {
     text-decoration: none;
     color: black;
     padding-left: .7rem;
     font-size: 1.2rem;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width: 833px) {
+    .navigation {
+        padding: 0 2rem;
+    }
+
+    .navigation-link {
+        display: none;
+    }
+
+    .navigation-icon {
+        display: block;
+    }
 }

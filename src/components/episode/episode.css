@@ -50,3 +50,27 @@
 .card #button-link:hover {
   background-color: #0277bd;
 }
+
+@media only screen and (max-width: 833px) {
+  .card h3 {
+    text-align: center;
+  }
+
+  .card-mobile {
+    align-items: stretch;
+    margin-top: 1rem;
+    padding: 1.5rem;
+  }
+
+  .card #button-link {
+    width: 10rem;
+  }
+
+  .card p {
+    padding: 0.3rem 0 0.3rem 0;
+  }
+
+  .card span {
+    padding: 0;
+  }
+}

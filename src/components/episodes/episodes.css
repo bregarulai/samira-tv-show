@@ -1,7 +1,14 @@
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     row-gap: 1rem;
     column-gap: 1rem;
     padding: 2rem 5rem;
+}
+
+@media only screen and (max-width: 833px) {
+    .cards {
+        padding: 1rem 2rem;
+        grid-template-columns: 1fr;
+    }
 }

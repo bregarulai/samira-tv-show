@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navigation.css";
+import { FaBars } from "react-icons/fa";
 
 const Navigation = () => {
   return (
@@ -8,13 +9,19 @@ const Navigation = () => {
       <div className="brand">
         <span> samira tv shows </span>
       </div>
-      <div>
-        <Link className="navigation-link" to="/">
-          home
-        </Link>
-        <Link className="navigation-link" to="/shows">
-          shows
-        </Link>
+
+      <div className="navigation-menu">
+        <div className="navigation-icon">
+          <FaBars />
+        </div>
+        <div className="navigation-links">
+          <Link className="navigation-link" to="/">
+            home
+          </Link>
+          <Link className="navigation-link" to="/shows">
+            shows
+          </Link>
+        </div>
       </div>
     </nav>
   );

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Episode = ({ episode }) => {
   return (
-    <div className="card">
+    <div className="card card-mobile">
       <Link to={`/shows/${episode.id}`}>
         <h3> {episode.name} </h3>
         <img src={episode.image ? episode.image.medium : null} alt="" />
