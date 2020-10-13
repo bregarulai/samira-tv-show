@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./navigation.css";
 import { FaBars } from "react-icons/fa";
 
-const Navigation = () => {
+const Navigation = ({ toggle }) => {
   return (
     <nav className="navigation">
       <div className="brand">
@@ -11,7 +11,7 @@ const Navigation = () => {
       </div>
 
       <div className="navigation-menu">
-        <div className="navigation-icon">
+        <div className="navigation-icon" onClick={toggle}>
           <FaBars />
         </div>
         <div className="navigation-links">

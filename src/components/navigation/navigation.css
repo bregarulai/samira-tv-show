@@ -22,7 +22,8 @@
 .navigation-icon {
     font-size: 2rem;
     display: none;
-    padding-top: .8rem;
+    padding-top: .5rem;
+    cursor: pointer;
 }
 
 .navigation-link {
@@ -44,5 +45,9 @@
 
     .navigation-icon {
         display: block;
+    }
+
+    .navigation .brand {
+        font-size: 1.5rem;
     }
 }
