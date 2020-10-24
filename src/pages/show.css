@@ -1,6 +1,7 @@
 .hero {
     display: flex;
     padding: 2rem 5rem;
+    margin-top: 7rem;
 }
 
 .text {
@@ -38,12 +39,22 @@
 }
 
 @media only screen and (max-width: 833px) {
+/* .navigation-icon {
+    position: absolute;
+    top: 1rem;
+    right: -14.5rem;
+    } */
+
     .hero {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 1rem 2rem;
-        margin-top: 1rem;
+        margin-top: 7rem;
+    }
+
+    .hero img {
+        width: 100%;
     }
 
     #goback-link {
