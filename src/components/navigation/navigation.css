@@ -17,6 +17,12 @@
     text-transform: uppercase;
 }
 
+.navigation .brand a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
 .navigation-menu {
     display: flex;
     justify-content: center;

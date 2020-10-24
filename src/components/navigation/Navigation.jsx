@@ -7,7 +7,7 @@ const Navigation = ({ toggle }) => {
   return (
     <nav className="navigation">
       <div className="brand">
-        <span> samira tv shows </span>
+        <span><Link to='/'> samira tv shows </Link></span>
       </div>
 
       <div className="navigation-menu">

@@ -17,6 +17,11 @@
 }
 
 @media only screen and (max-width: 833px) {
+
+    .search-box {
+        margin-top: 6rem;
+    }
+
     .search-box input {
         width: 100%;
         margin: 0 2rem;
