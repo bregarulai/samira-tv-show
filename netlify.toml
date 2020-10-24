@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "http://api.tvmaze.com/shows"
+  from = "http://api.tvmaze.com/"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
